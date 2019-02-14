@@ -16,3 +16,8 @@ import 'bootstrap';
 //= require turbolinks
 //= require_tree .
 
+// var data =
+
+// $(document).ready(function() {
+//     $('.js-example-basic-single').select2();
+// });

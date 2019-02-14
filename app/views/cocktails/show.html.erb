@@ -1,0 +1,19 @@
+<div class="container text-center">
+<%= image_tag "cocktail.jpg", alt: "cocktail", width: 300 %>
+<h1><%= @cocktail.name %></h1>
+
+  <p><%= link_to "Edit the cocktail", edit_cocktail_path(@cocktail), class: 'btn btn-info btn large' %></p>
+
+  <h2>ingredients :</h2>
+  <ul style="list-style: none;">
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.ingredient.name %> : <%= dose.description %></li>
+    <% end %>
+  </ul>
+  <% @cocktail.doses %>
+
+  <p><%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail), class: 'btn btn-info btn large' %></p>
+
+  <p><%= link_to "Go back to mainpage", cocktails_path, class: 'btn btn-primary btn large' %></p>
+
+</div>

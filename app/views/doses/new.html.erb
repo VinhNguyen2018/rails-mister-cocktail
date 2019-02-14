@@ -1,0 +1,10 @@
+<div class="container text-center">
+  <h1><%= @cocktail.name  %></h1>
+
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient, input_html: {style: 'width:300px !important;'} %>
+    <%= f.input :description, placeholder: 'Type the amount of ingredients needed', input_html: {style: 'width:300px !important;'}%>
+    <%= f.button :submit, class: 'btn btn-success btn-lg' %>
+  <% end %>
+</div>
